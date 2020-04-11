@@ -1,0 +1,32 @@
+.header {
+	padding-top: 15px;
+	padding-bottom: 15px;
+	background-color: #383838;
+
+	&__container {
+		display: flex;
+		max-width: 650px !important;
+	}
+
+	&__buttons {
+		margin-left: auto;
+		display: flex;
+
+		&__item {
+			padding: 12px;
+			margin-right: 10px;
+			color: #fff;
+			font-size: 12px;
+			display: block;
+			text-decoration: none;
+			font-weight: 600;
+			text-transform: uppercase;
+
+			&:last-child { margin-right: 0; }
+
+			&--border {
+				border: 1px solid #fff;
+			}
+		}
+	}
+}
