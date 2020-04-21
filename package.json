@@ -1,6 +1,7 @@
 {
   "name": "aquelaforca-front-end",
   "version": "0.1.0",
+  "homepage": "./",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
@@ -9,6 +10,7 @@
     "node-sass": "^4.13.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-filter-search": "^1.0.11",
     "react-google-font-loader": "^1.1.0",
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.4.1"

@@ -1,7 +1,8 @@
 .header {
 	padding-top: 15px;
 	padding-bottom: 15px;
-	background-color: #383838;
+	height: 70px;
+	background: #383838;
 
 	&__container {
 		display: flex;
@@ -14,6 +15,7 @@
 
 		&__item {
 			padding: 12px;
+			line-height: 1.3em;
 			margin-right: 10px;
 			color: #fff;
 			font-size: 12px;
@@ -28,5 +30,14 @@
 				border: 1px solid #fff;
 			}
 		}
+	}
+
+	&--overlay {
+		background-color: transparent;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		z-index: 10;
 	}
 }

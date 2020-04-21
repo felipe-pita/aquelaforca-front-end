@@ -1,0 +1,20 @@
+.title {
+	display: flex;
+	align-items: center;
+	height: 576px;
+	background: url('../../images/HandsBackground.svg') no-repeat center calc(50% - 140px) #383838;
+	background-size: cover;
+	position: relative;
+	font-size : 38px;
+	color : #FFFFFF;
+	text-align: center;
+
+	&__section-transaction {
+		width: 100%;
+		height: 150px;
+		color: #fff;
+		pointer-events: none;
+		position: absolute;
+		bottom: 0;
+	}
+}

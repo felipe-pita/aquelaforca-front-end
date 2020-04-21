@@ -2,31 +2,29 @@ import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import GoogleFontLoader from 'react-google-font-loader';
 
-import Header from "./components/Header/Header";
-import Footer from "./components/Footer/Footer";
-import Home from "./components/Home/Home";
+import './App.scss';
 
-import './App.css';
+import Home from "./components/Pages/Home/Home";
+import Search from "./components/Pages/Search/Search";
+import Register from "./components/Pages/Register/Register";
 
 function App() {
 	return (
 		<>
-			<GoogleFontLoader fonts={[{ font: 'Montserrat', weights: [300,400,600,400,600,'ital','wght'], }]} />
 			<Router>
-				<Header></Header>
 				<Switch>
+					<Route path="/buscar">
+						<Search />
+					</Route>
+					<Route path="/cadastrar">
+						<Register />
+					</Route>
 					<Route path="/">
 						<Home />
 					</Route>
-					<Route path="/buscar">
-						<Home />
-					</Route>
-					<Route path="/cadastrar">
-						<Home />
-					</Route>
 				</Switch>
-				<Footer></Footer>
 			</Router>
+			<GoogleFontLoader fonts={[{ font: 'Montserrat', weights: [300,400,600,400,600,'ital','wght'], }]} />
 		</>
 	);
 }

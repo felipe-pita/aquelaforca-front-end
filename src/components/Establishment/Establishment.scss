@@ -1,0 +1,58 @@
+.establishment {
+	display: flex;
+	padding-bottom: 40px;
+	border-bottom: 1px solid #ddd;
+	margin-bottom: 40px;
+
+	&__logo {
+		width: 120px;
+		margin-right: 20px;
+		flex-shrink: 0;
+	}
+
+	&__info {
+		width: 100%;
+	}
+
+	&__title {
+		font-weight : 600;
+		font-size : 24px;
+		color : #000000;
+		margin-bottom: 15px;
+	}
+
+	&__address {
+		font-size : 16px;
+		color : #888;
+		font-weight: 400;
+		line-height: 1.2em;
+		margin-bottom: 10px;
+	}
+
+	&__contact {
+		font-size: 18px;
+		display: flex;
+		margin-bottom: 20px;
+
+		&__item {
+			margin-right: 10px;
+
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+
+		&__icon {
+
+		}
+	}
+
+	&__description {
+		font-size : 14px;
+		color : #666;
+		font-weight: 400;
+		line-height: 1.2em;
+		margin-bottom: 10px;
+		font-style: italic;
+	}
+}

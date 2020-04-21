@@ -1,0 +1,27 @@
+.search-page {
+	
+	&__form {
+		padding-top: 60px;
+		padding-bottom: 60px;
+		background-color: #424242;
+
+		&__container {
+			max-width: 1200px;
+		}
+	}
+
+	&__results {
+		padding-top: 40px;
+		padding-bottom: 80px;
+
+		&__container {
+			max-width: 1200px;
+		}
+
+		&__title {
+			font-size : 16px;
+			margin-top: 0;
+			margin-bottom: 20px;
+		}
+	}
+}
