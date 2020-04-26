@@ -5,4 +5,28 @@
 	&__form {
 		
 	}
+
+	#multiselectContainerReact {
+		
+
+		.searchBox {
+			width: 280px;
+		}
+
+		.optionListContainer {
+
+			.highlight {
+				color: #000;
+				background: #FF7300 !important;
+			}
+
+			li {
+
+				&:hover {
+					color: #000;
+					background: rgba(#FF7300, 0.2);
+				}
+			}
+		}
+	}
 }
