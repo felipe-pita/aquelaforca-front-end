@@ -119,4 +119,44 @@
 			}
 		}
 	}
+
+	@media (max-width: 950px) {
+
+		&__search {
+			padding-top: 150px;
+			padding-bottom: 150px;
+
+			&__about-link {
+				bottom: 40px;
+			}
+		}
+		
+		&__about {
+			margin-top: -50px;
+
+			&__section-transaction {
+				height: 50px;
+			}
+
+			&__container {
+				display: block;
+			}
+
+			&__draw {
+				padding: 0 80px;
+				text-align: center;
+
+				svg {
+					width: 100%;
+					height: auto;
+					max-width: 300px;
+				}
+			}
+
+			&__text {
+				margin-left: auto;
+				margin-right: auto;
+			}
+		}
+	}
 }

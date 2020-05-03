@@ -1,4 +1,5 @@
 import React from 'react';
+import { useHistory } from "react-router-dom";
 
 import { ReactComponent as SectionTransaction } from '../../../images/SectionTransaction.svg';
 import { ReactComponent as AboutDraw } from '../../../images/AboutDraw.svg';
@@ -10,6 +11,15 @@ import SearchForm from '../../SearchForm/SearchForm';
 import './Home.scss';
 
 export default function Home({...props}) {
+	const history = useHistory();
+
+	const handleHomeSearch = (event) => {
+		event.preventDefault();
+
+		let searchValue = event.target.querySelector('[type=search]').value;
+
+		history.push('/buscar', {search: searchValue});
+	}
 	
 	return (
 		<>
@@ -17,7 +27,7 @@ export default function Home({...props}) {
 			<div className="home-page">
 				<div className="home-page__search">
 					<div className="home-page__search__container container">
-						<SearchForm title={true} terms={true} />
+						<SearchForm title={true} terms={true} onSearch={() => {}} onSubmit={(event) => { handleHomeSearch(event)}} />
 					</div>
 					<a className="home-page__search__about-link" href="#sobre">conheça</a>
 				</div>

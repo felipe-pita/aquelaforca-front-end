@@ -17,4 +17,14 @@
 		position: absolute;
 		bottom: 0;
 	}
+
+	@media (max-width: 700px) {
+		height: 200px;
+		font-size: 24px;
+		background-position: center;
+
+		&__section-transaction {
+			height: 50px;
+		}
+	}
 }

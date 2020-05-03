@@ -40,4 +40,26 @@
 		width: 100%;
 		z-index: 10;
 	}
+
+	@media (max-width: 640px) {
+		height: auto;
+
+		&__logo {
+
+			svg {
+				width: 143px;
+				height: 80px;
+			}
+		}
+
+		&__buttons {
+			display: block;
+			text-align: right;
+			padding-left: 20px;
+
+			&__item {
+				margin-right: 0;
+			}
+		}
+	}
 }

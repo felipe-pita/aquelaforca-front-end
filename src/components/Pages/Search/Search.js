@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useLocation } from "react-router-dom";
 import FilterResults from 'react-filter-search';
 
 import Header from "../../Header/Header";
@@ -8,11 +9,18 @@ import Establishment from '../../Establishment/Establishment';
 
 import './Search.scss';
 
-export default function Search() {
+export default function Search({...props}) {
 	const [search, setSearch] = useState('');
 	const [isLoading, setIsLoading] = useState(true);
 	const [establishmentsList, setEstablishmentsList] = useState(null);
 	const [hasErrors, setHasErrors] = useState(false);
+
+	const location = useLocation();
+	const searchFromHome = location && location.state && location.state.search;
+	const searchTagFromHome = location && location.state && location.state.tag;
+
+	//console.log(searchFromHome);
+	console.log(searchTagFromHome);
 
 	/**
 	 * Lista todos os estabelecimentos
@@ -29,14 +37,15 @@ export default function Search() {
 				setHasErrors(true);
 				setIsLoading(false);
 			});
-	}, []);
 
-	/**
-	 * Controla a pesquisa
-	 */
-	const handleSearch = event => {
-		setSearch(event.target.value);
-	};
+		if (searchFromHome) {
+			setSearch(searchFromHome.toString());
+		}
+
+		if (searchTagFromHome) {
+			setSearch(searchTagFromHome);
+		}
+	}, []);
 
 	/**
 	 * Troca o título da página conforme a quatidade de itens
@@ -63,7 +72,7 @@ export default function Search() {
 			<div className="search-page">
 				<div className="search-page__form">
 					<div className="search-page__form__container container">
-						<SearchForm title={true} onSearch={handleSearch} />
+						<SearchForm title={true} onSearch={(e) => { setSearch(e.target.value)} } onSubmit={(event) => {event.preventDefault()}} defaultValue={search} />
 					</div>
 				</div>
 				<div className="search-page__results">

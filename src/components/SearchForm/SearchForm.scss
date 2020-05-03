@@ -48,9 +48,29 @@
 			font-weight: 600;
 			display: block;
 			list-style: none;
+			cursor: pointer;
 
 			&:last-child {
 				margin-right: 0;
+			}
+		}
+	}
+
+	@media (max-width: 600px) {
+		
+		&__form {
+			height: 60px;
+	
+			&__input {
+				padding: 10px;
+			}
+		}
+
+		&__terms {
+	
+			&__item {
+				padding: 7px 8px;
+				font-size: 14px;
 			}
 		}
 	}
